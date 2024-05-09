@@ -1,27 +1,40 @@
 {
-  "name": "Web Templates MUI",
+  "author": {
+    "email": "alexandrumlakar@protonmail.com",
+    "name": "Aquastias",
+    "url": "https://github.com/Aquastias"
+  },
+  "dependencies": {
+    "@emotion/react": "11.11.4",
+    "@emotion/styled": "11.11.5",
+    "@mui/icons-material": "6.0.0-alpha.6",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@mui/material": "6.0.0-alpha.6",
+    "@types/node": "20.12.11",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "4.2.1",
+    "react-error-boundary": "4.0.13",
+    "react-helmet-async": "2.0.5",
+    "react-router-dom": "^6.23.0",
+    "typescript": "5.4.5",
+    "vite": "5.2.11"
+  },
+  "name": "web-templates-mui",
   "private": true,
-  "version": "5.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
+    "dev": "vite",
+    "format:check": "prettier --check \"**/*.{js,jsx,mjs,ts,tsx,mdx}\" --cache",
+    "format:write": "prettier --write \"**/*.{js,jsx,mjs,ts,tsx,mdx}\" --cache",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --fix ./src",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
-  "dependencies": {
-    "@emotion/react": "latest",
-    "@emotion/styled": "latest",
-    "@mui/icons-material": "next",
-    "@mui/material": "next",
-    "react": "latest",
-    "react-dom": "latest"
-  },
-  "devDependencies": {
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "@vitejs/plugin-react": "latest",
-    "typescript": "latest",
-    "vite": "latest"
-  }
+  "type": "module",
+  "version": "1.0.0"
 }

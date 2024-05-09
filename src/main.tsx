@@ -1,15 +1,30 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import { ThemeProvider } from '@emotion/react';
-import { CssBaseline } from '@mui/material';
-import theme from './theme';
-import App from './App';
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+import {
+  ScrollRestoration,
+  createBrowserRouter,
+  Outlet,
+  RouterProvider,
+} from "react-router-dom";
+import { routes } from "@/routes";
+import { Root } from "@/root";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <Root>
+        <ScrollRestoration />
+        <Outlet />
+      </Root>
+    ),
+    children: [...routes],
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>,
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
