@@ -1,10 +1,8 @@
-import * as React from "react";
-import type { RouteObject } from "react-router-dom";
+import HomePage from "@/pages/Homepage";
+import Dashboard from "@/pages/Dashboard";
 import { Outlet } from "react-router-dom";
 
-const HomePage: React.FC = () => {
-  return <div>Homepage</div>;
-};
+import type { RouteObject } from "react-router-dom";
 
 export const routes: RouteObject[] = [
   {
@@ -15,5 +13,9 @@ export const routes: RouteObject[] = [
         element: <HomePage />,
       },
     ],
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard />,
   },
 ];

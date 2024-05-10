@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import React from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { ThemeProvider, THEME_ID } from "@mui/material";
 import { CssBaseline } from "@mui/material";
